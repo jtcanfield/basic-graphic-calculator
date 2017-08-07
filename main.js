@@ -8,6 +8,7 @@ function calculate( nameOfCallbackFunction ){
   console.log(currentQueArray);
   let result = 4 * ( 35 / 7 );
   nameOfCallbackFunction( result );
+  currentQueArray = [];
 }
 function print( num ){
   var element = document.getElementById("answer_box");
