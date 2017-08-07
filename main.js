@@ -4,13 +4,12 @@ function onClick(object, value){
   console.log(value);
   currentQueString += ""+value+"";
   console.log(currentQueString);
-
+  answerbox.textContent += value;
 }
 function calculate( nameOfCallbackFunction ){
   console.log(eval(currentQueString));
   let result = eval(currentQueString)
   nameOfCallbackFunction( result );
-  // var currentQueString = "";
 }
 function print( num ){
   answerbox.textContent = num;
