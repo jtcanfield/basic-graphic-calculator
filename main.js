@@ -5,7 +5,7 @@ function onClick(value){
   answerbox.textContent += value;
 }
 function calculate(){
-  let result = eval(currentQueString)
+  let result = eval(currentQueString);
   answerbox.textContent = result;
 }
 function onClickClear(){
