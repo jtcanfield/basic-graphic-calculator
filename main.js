@@ -1,16 +1,14 @@
 var currentQueString = " ";
 var answerbox = document.getElementById("answer_box");
 function onClick(object, value){
-  console.log(value);
   currentQueString += ""+value+"";
-  console.log(currentQueString);
   answerbox.textContent += value;
 }
-function calculate( nameOfCallbackFunction ){
-  console.log(eval(currentQueString));
+function calculate(){
   let result = eval(currentQueString)
-  nameOfCallbackFunction( result );
+  answerbox.textContent = result;
 }
-function print( num ){
+function onClickClear(){
+  currentQueString = " ";
   answerbox.textContent = num;
 }
