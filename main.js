@@ -10,5 +10,5 @@ function calculate(){
 }
 function onClickClear(){
   currentQueString = " ";
-  answerbox.textContent = num;
+  answerbox.textContent = " ";
 }
