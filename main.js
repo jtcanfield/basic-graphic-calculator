@@ -8,6 +8,7 @@ function onClick(value, canReCalculate){
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   console.log(currentQueString);
+  recentlyCalculated = false;
 }
 function calculate(){
   let result = eval(currentQueString);
