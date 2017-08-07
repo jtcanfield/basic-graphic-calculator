@@ -1,3 +1,4 @@
+var currentQueArray = [];
 function onClick(object, value){
-  console.log(value);
+  console.log(object, value);
 }
