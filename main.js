@@ -1,3 +1,3 @@
-function onClick(value){
+function onClick(object, value){
   console.log(value);
 }
