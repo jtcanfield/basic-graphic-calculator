@@ -5,5 +5,7 @@ td {
   padding: 30px;
   background-color: #61B34F;
   margin: 0px;
-
+}
+.operator {
+  background-color: #82C276;
 }
