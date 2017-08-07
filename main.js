@@ -1,14 +1,14 @@
-var currentQueArray = [];
+var currentQueString = " ";
 function onClick(object, value){
-  console.log(object);
   console.log(value);
-  currentQueArray.push(value)
+  currentQueString += ""+value+"";
+  console.log(currentQueString);
 }
 function calculate( nameOfCallbackFunction ){
-  console.log(currentQueArray);
+  console.log(eval(currentQueString));
   let result = 4 * ( 35 / 7 );
   nameOfCallbackFunction( result );
-  currentQueArray = [];
+  // var currentQueString = "";
 }
 function print( num ){
   var element = document.getElementById("answer_box");
