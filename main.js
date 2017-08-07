@@ -10,4 +10,3 @@ function calculate( nameOfCallbackFunction ){
   let result = 4 * ( 35 / 7 );
   nameOfCallbackFunction( result );
 }
-calculate( print );
