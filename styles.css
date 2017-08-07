@@ -1,13 +1,19 @@
 html{
   text-align: center;
 }
-td {
+td, th {
   padding: 30px;
   background-color: #61B34F;
   margin: 0px;
   color: #E6F0E6;
 }
+td {
+  cursor: pointer;
+}
 .operator {
   background-color: #82C276;
   color: #3C693C;
+}
+.operator:hover {
+  color: #E6F0E6;
 }
