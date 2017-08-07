@@ -1,6 +1,6 @@
 var currentQueString = " ";
 var answerbox = document.getElementById("answer_box");
-function onClick(object, value){
+function onClick(value){
   currentQueString += ""+value+"";
   answerbox.textContent += value;
 }
