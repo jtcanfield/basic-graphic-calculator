@@ -10,6 +10,9 @@ td, th {
 td {
   cursor: pointer;
 }
+td:hover {
+  background-color: #82C276;
+}
 .operator {
   background-color: #82C276;
   color: #3C693C;
