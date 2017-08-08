@@ -8,7 +8,6 @@ function onClick(value, canReCalculate){
   }
   currentQueString += ""+value+"";
   answerbox.textContent += value;
-  console.log(currentQueString);
   recentlyCalculated = false;
 }
 function calculate(){
@@ -19,6 +18,10 @@ function calculate(){
 function onClickClear(){
   currentQueString = " ";
   answerbox.textContent = " ";
+}
+function onClickBackspace(){
+  currentQueString = currentQueString.slice(0, -1);
+  answerbox.textContent = currentQueString;
 }
 /*TODO
 Need to add function to make sure number is at the end
