@@ -5,12 +5,15 @@
     <title>Basic Graphic Calculator</title>
   </head>
   <body>
-    <h1>Calculator</h1>
+    <br><br><br>
     <div id="calculator holder">
       <table>
         <tbody>
           <tr>
-            <td onclick="onClickClear()">C</td><th colspan="3" id="answer_box"></th>
+            <th colspan="3">CALCULATOR</th><th id="answer_box"></th>
+          </tr>
+          <tr>
+            <td onclick="onClickClear()">C</td><th colspan="3" id="answer_box"><!--<input type="text" id="answer_box">--></th>
           </tr>
           <tr>
             <td onclick="onClick(7, false)">7</td><td onclick="onClick(8, false)">8</td><td onclick="onClick(9, false)">9</td><td onclick="onClick('/', true)"class="operator">/</td>
