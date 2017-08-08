@@ -9,6 +9,9 @@ td, th {
   /*Defualt font Size is 16px*/
   font-size: 20px;
 }
+table {
+  margin: auto;
+}
 td {
   cursor: pointer;
 }
