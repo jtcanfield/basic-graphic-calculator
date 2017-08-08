@@ -6,6 +6,8 @@ td, th {
   background-color: #61B34F;
   margin: 0px;
   color: #E6F0E6;
+  /*Defualt font Size is 16px*/
+  font-size: 20px;
 }
 td {
   cursor: pointer;
