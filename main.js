@@ -12,9 +12,9 @@ function onClick(value, canReCalculate){
   recentlyCalculated = false;
 }
 function calculate(){
+  recentlyCalculated = true;
   let result = eval(currentQueString);
   answerbox.textContent = result;
-  recentlyCalculated = true;
 }
 function onClickClear(){
   currentQueString = " ";
