@@ -20,3 +20,8 @@ function onClickClear(){
   currentQueString = " ";
   answerbox.textContent = " ";
 }
+/*TODO
+Need to add function to make sure number is at the end
+need to make sure that the operators are not sent more than once
+need to add a backspace button
+*/
