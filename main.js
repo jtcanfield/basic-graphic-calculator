@@ -1,10 +1,13 @@
 var currentQueString = " ";
 var recentlyCalculated = false;
-var lastCharacter = 0;
+var lastCharacter = "";
 var numOfOpenParens = 0;
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
   messagebox.innerHTML = "<br>";
+  if (typeof lastCharacter === "string"){
+    return
+  }
   if (recentlyCalculated === true && canReCalculate === false){
     currentQueString = " ";
     answerbox.textContent = " ";
@@ -12,27 +15,19 @@ function onClick(value, canReCalculate){
   if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-" && value !== "(" && value !== ")"){
     return
   }
-  switch (value){
-    case "(":
-      console.log("its a (");
-      break;
-    case ")":
-      console.log("its a )");
-      break;
+  if (value === "("){
+    numOfOpenParens += 1;
   }
-  // if (value === "("){
-  //   numOfOpenParens += 1;
-  // }
-  // if (value === ")"){
-  //
-  // } else if (value === ")"){
-  //   numOfOpenParens -= 1;
-  // }
+  if (value === ")" && numOfOpenParens === 0){
+    return
+  }
+  if (value === ")"){
+    numOfOpenParens -= 1;
+  }
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   recentlyCalculated = false;
   lastCharacter = Number(currentQueString.charAt((currentQueString.length) - 1));
-  console.log(lastCharacter);
 }
 function calculate(){
   try {
@@ -47,6 +42,8 @@ function calculate(){
   answerbox.textContent = result;
 }
 function onClickClear(){
+  lastCharacter = "";
+  numOfOpenParens = 0;
   currentQueString = " ";
   answerbox.textContent = " ";
 }
