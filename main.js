@@ -3,7 +3,7 @@ var recentlyCalculated = false;
 let lastCharacter = 0;
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
-  messagebox.innerHTML = " ";
+  messagebox.innerHTML = "<br>";
   if (recentlyCalculated === true && canReCalculate === false){
     currentQueString = " ";
     answerbox.textContent = " ";
