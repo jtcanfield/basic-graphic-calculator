@@ -5,7 +5,7 @@ var numOfOpenParens = 0;
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
   messagebox.innerHTML = "<br>";
-  if (typeof lastCharacter === "string"){
+  if (typeof lastCharacter === "string" && typeof value !== "number"){
     return
   }
   if (recentlyCalculated === true && canReCalculate === false){
@@ -13,7 +13,7 @@ function onClick(value, canReCalculate){
     answerbox.textContent = " ";
   }
   if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-" && value !== "(" && value !== ")"){
-    return
+      return 
   }
   if (value === "("){
     numOfOpenParens += 1;
