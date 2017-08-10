@@ -18,16 +18,16 @@
             <td onclick="onClickClear()">C</td><th colspan="4" id="answer_box"><!--<input type="text" id="answer_box">--></th>
           </tr>
           <tr>
-            <td onclick="onClick(^, false)">^</td><td onclick="onClick(7, false)">7</td><td onclick="onClick(8, false)">8</td><td onclick="onClick(9, false)">9</td><td onclick="onClick('/', true)"class="operator">/</td>
+            <td onclick="onClick('**', true)">^</td><td onclick="onClick(7, false)">7</td><td onclick="onClick(8, false)">8</td><td onclick="onClick(9, false)">9</td><td onclick="onClick('/', true)"class="operator">/</td>
           </tr>
           <tr>
-            <td onclick="onClick(%, false)">%</td><td onclick="onClick(4, false)">4</td><td onclick="onClick(5, false)">5</td><td onclick="onClick(6, false)">6</td><td onclick="onClick('*', true)"class="operator">*</td>
+            <td onclick="onClick('(', false)">(</td><td onclick="onClick(4, false)">4</td><td onclick="onClick(5, false)">5</td><td onclick="onClick(6, false)">6</td><td onclick="onClick('*', true)"class="operator">*</td>
           </tr>
           <tr>
-            <td onclick="onClick('(', false)">(</td><td onclick="onClick(1, false)">1</td><td onclick="onClick(2, false)">2</td><td onclick="onClick(3, false)">3</td><td onclick="onClick('-', true)"class="operator">-</td>
+            <td onclick="onClick(')', false)">)</td><td onclick="onClick(1, false)">1</td><td onclick="onClick(2, false)">2</td><td onclick="onClick(3, false)">3</td><td onclick="onClick('-', true)"class="operator">-</td>
           </tr>
           <tr>
-            <td onclick="onClick(')', false)">)</td><td onclick="onClick(0, false)">0</td><td onclick="onClick('.', false)">.</td><td onclick="calculate();">=</td><td onclick="onClick('+', true)"class="operator">+</td>
+            <td colspan="4" onclick="onClick(0, false)">0</td><td onclick="onClick('.', false)">.</td><td onclick="calculate();">=</td><td onclick="onClick('+', true)"class="operator">+</td>
           </tr>
         </tbody>
       </table>
