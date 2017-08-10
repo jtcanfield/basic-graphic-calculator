@@ -1,5 +1,6 @@
 var currentQueString = " ";
 var recentlyCalculated = false;
+let lastCharacter = currentQueString.charAt((currentQueString.length) - 1);
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
   if (recentlyCalculated === true && canReCalculate === false){
@@ -9,8 +10,10 @@ function onClick(value, canReCalculate){
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   recentlyCalculated = false;
+  console.log(lastCharacter);
 }
 function calculate(){
+  // if
   recentlyCalculated = true;
   let result = eval(currentQueString);
   answerbox.textContent = result;
