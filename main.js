@@ -8,7 +8,10 @@ function onClick(value, canReCalculate){
     currentQueString = " ";
     answerbox.textContent = " ";
   }
-  if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-"){
+  if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-" && value !== "(" && value !== ")"){
+    return
+  }
+  if (value === "("){
     return
   }
   currentQueString += ""+value+"";
@@ -25,8 +28,8 @@ function calculate(){
       messagebox.innerHTML = err;
       return
   }
-  recentlyCalculated = true;
   let result = eval(currentQueString);
+  recentlyCalculated = true;
   answerbox.textContent = result;
 }
 function onClickClear(){
