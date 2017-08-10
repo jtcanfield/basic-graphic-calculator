@@ -8,6 +8,9 @@ function onClick(value, canReCalculate){
     currentQueString = " ";
     answerbox.textContent = " ";
   }
+  if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-"){
+    return
+  }
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   recentlyCalculated = false;
@@ -16,13 +19,12 @@ function onClick(value, canReCalculate){
 }
 function calculate(){
   try {
-      if(isNaN(lastCharacter)) throw "not a number";
+      if(isNaN(lastCharacter)) throw "Expecting Number at End";
   }
   catch(err) {
-      messagebox.innerHTML = "Input is " + err;
+      messagebox.innerHTML = err;
       return
   }
-  console.log(isNaN(lastCharacter));
   recentlyCalculated = true;
   let result = eval(currentQueString);
   answerbox.textContent = result;
