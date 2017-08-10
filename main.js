@@ -1,6 +1,7 @@
 var currentQueString = " ";
 var recentlyCalculated = false;
-let lastCharacter = 0;
+var lastCharacter = 0;
+var numOfOpenParens = 0;
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
   messagebox.innerHTML = "<br>";
@@ -11,9 +12,22 @@ function onClick(value, canReCalculate){
   if (isNaN(lastCharacter) && typeof value !== "number" && value !== "-" && value !== "(" && value !== ")"){
     return
   }
-  if (value === "("){
-    return
+  switch (value){
+    case "(":
+      console.log("its a (");
+      break;
+    case ")":
+      console.log("its a )");
+      break;
   }
+  // if (value === "("){
+  //   numOfOpenParens += 1;
+  // }
+  // if (value === ")"){
+  //
+  // } else if (value === ")"){
+  //   numOfOpenParens -= 1;
+  // }
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   recentlyCalculated = false;
@@ -22,7 +36,7 @@ function onClick(value, canReCalculate){
 }
 function calculate(){
   try {
-      if(isNaN(lastCharacter)) throw "Expecting Number at End";
+      if(isNaN(lastCharacter) && lastCharacter !== ")") throw "Expecting Number at End";
   }
   catch(err) {
       messagebox.innerHTML = err;
