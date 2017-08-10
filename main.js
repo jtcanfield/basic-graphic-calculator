@@ -1,6 +1,6 @@
 var currentQueString = " ";
 var recentlyCalculated = false;
-let lastCharacter = currentQueString.charAt((currentQueString.length) - 1);
+let lastCharacter = 0;
 var answerbox = document.getElementById("answer_box");
 function onClick(value, canReCalculate){
   if (recentlyCalculated === true && canReCalculate === false){
@@ -10,10 +10,18 @@ function onClick(value, canReCalculate){
   currentQueString += ""+value+"";
   answerbox.textContent += value;
   recentlyCalculated = false;
+  lastCharacter = Number(currentQueString.charAt((currentQueString.length) - 1));
   console.log(lastCharacter);
 }
 function calculate(){
-  // if
+  try {
+      if(isNaN(lastCharacter)) throw "not a number";
+  }
+  catch(err) {
+      messagebox.innerHTML = "Input is " + err;
+      return
+  }
+  console.log(isNaN(lastCharacter));
   recentlyCalculated = true;
   let result = eval(currentQueString);
   answerbox.textContent = result;
